@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <center style="transform: translateY(100px) translateX(-10px);">
+        <div class="container">
+            <i class="fa-solid fa-circle-info" style="visibility: hidden; position: absolute; top: 25px; transform: translateX(5px);font-size: 13px;color: rgb(253, 89, 89);"><span>operating limit max</span></i>
+            <div class="results">6&times;6&times;9</div>
+            <div onclick="Clear()" id="operation" class="clearEntry">C</div>
+            <div onclick="remove()" id="operation" class="remove"><i class="fa-solid fa-delete-left"></i></div>
+            <div onclick="division(this)" id="operation" class="division">/</div>
+            <div onclick="number(this)" id="number" class="seven">7</div>
+            <div onclick="number(this)" id="number" class="eight">8</div>
+            <div onclick="number(this)" id="number" class="nine">9</div>
+            <div onclick="multiplication()" id="operation" class="multiplication">&#10006;</div>
+            <div onclick="number(this)" id="number" class="four">4</div>
+            <div onclick="number(this)" id="number" class="five">5</div>
+            <div onclick="number(this)" id="number" class="six">6</div>
+            <div onclick="subtraction()" id="operation" class="subtraction">&#45;</div>
+            <div onclick="number(this)" id="number" class="one">1</div>
+            <div onclick="number(this)" id="number" class="two">2</div>
+            <div onclick="number(this)" id="number" class="three">3</div>
+            <div onclick="plus()" id="operation" class="plus">&#43;</div>
+            <div onclick="number(this)" id="number" class="nol">0</div>
+            <div onclick="number(this)" id="number" class="twoZero">00</div>
+            <div onclick="number(this)" id="number" onclick="" id="operation" class="comma">.</div>
+            <div onclick="amount()" id="operation" class="amount">=</div>
+        </div>
+    </center>
+    <script src="main.js"></script>
+</body>
+</html>
