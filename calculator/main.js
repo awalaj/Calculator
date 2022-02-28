@@ -1,58 +1,61 @@
-let results = document.querySelector(".results");
+let input = document.querySelector("#input");
+let btn = document.querySelectorAll("button")
 
 $(document).ready(function(){
-    $('.container').click(function (e) { 
-        if($(e.target).attr('class') == 'number'){
-            $(results).append($(e.target).text());
-            if($(results).html().length >= 13){
-                $('#warning').css({
-                    'visibility' : 'visible'
-                });
-                $(results).css({
-                    'overflowX' : "scroll"
-                });
-            }else{
-                $('#warning').css({
-                    'visibility' : 'hidden'
-                });
+    $(".number").click(function(e){
+        $(input).append($(e.target).text());
+        if($(input).html().length >= 12){
+            $('#warning').css({
+                'visibility' : 'visible'
+            });
+            for(let i = 0; i < btn.length; i++){
+                btn[i].disabled = true
+                btn[1].disabled = false
             }
+        }else{
+            $('#warning').css({
+                'visibility' : 'hidden'
+            });
         }
-        switch($(e.target).attr('id')){
-            case 'clearEntry':
-                $(results).html('');
-                break;
-            case 'remove':
-                let ops = $(results).html();
-                var remove = ops.replace(ops.slice(-1), "");
-                $(results).html(remove);
-                if($(results).html().length <= 13){
-                    $('#warning').css({
-                        'visibility' : 'hidden'
-                    });
-                }
-                break;
-            case 'multiplication':
-                $(results).append('&times;');
-                break;
-            case 'subtraction':
-                $(results).append('-');
-                break;
-            case 'plus':
-                $(results).append('+');
-                break;
-            case 'amount':
-                let operator = {
-                    "×" : "*"
-                }
-                let sort = results.innerHTML.replace(/×/gi, function(matched){
-                    return operator[matched]
-                })
-                try{
-                    $(results).html(eval(sort));
-                }catch(err){
-                    alert(err.message)
-                }
-                break;
+    })
+    $('#clearEntry').click(function(){
+        $(input).html('');
+    })
+    $("#remove").click(function(){
+        let ops = $(input).html();
+        var remove = ops.replace(ops.slice(-1), "");
+        $(input).html(remove);
+        for(let i = 0; i < btn.length; i++){
+            btn[i].disabled = false
+            btn[1].disabled = false
         }
-    });
+        if($(input).html().length <= 12){
+            $('#warning').css({
+                'visibility' : 'hidden'
+            });
+        }
+    })
+    $("#multiplication").click(function(){
+        $(input).append("&times;");
+    })
+    $("#subtraction").click(function(){
+        $(input).append("-");
+    })
+    $("#plus").click(function(){
+        $(input).append("+")
+    })
+    $("#amount").click(function(){
+        let operator = {
+            "×" : "*"
+        };
+        let sort = input.innerHTML.replace(/×/gi, function(matched){
+            return operator[matched];
+        })
+        try{
+            $(input).html(eval(sort))
+        }catch(err){
+            alert(err.message);
+        }
+    })
 })
+
