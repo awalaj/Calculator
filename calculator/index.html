@@ -9,30 +9,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
-<body>
-    <center style="transform: translateY(120px) translateX(-10px);">
+<body style="padding: 100px;">
+    <center>
         <div class="container">
-            <i id="warning" class="fa-solid fa-circle-info" style="visibility: hidden; position: absolute; top: 25px; transform: translateX(5px);font-size: 13px;color: rgb(253, 89, 89);"><span>operating limit max</span></i>
-            <div class="results"></div>
-            <div id="clearEntry">C</div>
-            <div id="remove"><i class="fa-solid fa-delete-left"></i></div>
-            <div class="number">/</div>
-            <div class="number">7</div>
-            <div class="number">8</div>
-            <div class="number">9</div>
-            <div id="multiplication">&#10006;</div>
-            <div class="number">4</div>
-            <div class="number">5</div>
-            <div class="number">6</div>
-            <div id="subtraction">&#45;</div>
-            <div class="number">1</div>
-            <div class="number">2</div>
-            <div class="number">3</div>
-            <div id="plus">&#43;</div>
-            <div class="number">0</div>
-            <div class="number">00</div>
-            <div class="number">.</div>
-            <div id="amount">=</div>
+            <i id="warning" class="fa-solid fa-circle-info" style="visibility: hidden; position: absolute; top: 125px; transform: translateX(5px);font-size: 13px;color: rgb(253, 89, 89);"><span>operating limit max</span></i>
+            <div class="input">
+                <p id="input" style="font-size: 35px;"></p>
+            </div>
+            <button class="operation" id="clearEntry" style="font-size: 30px; padding: 5px 10px; font-weight: bold;letter-spacing: 8px;">AC</button>
+            <button class="operation" id="remove" style="padding-bottom: 15px;"><i class="fa-solid fa-delete-left"></i></button>
+            <button class="number" style="padding-bottom: 15px;">/</button>
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="operation" id="multiplication">&#10006;</button>
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="operation" id="subtraction">&#45;</button>
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="operation" id="plus">&#43;</button>
+            <button class="number">0</button>
+            <button class="number">00</button>
+            <button class="number">.</button>
+            <button class="operation" id="amount">=</button>
         </div>
     </center>
     <script src="main.js"></script>
