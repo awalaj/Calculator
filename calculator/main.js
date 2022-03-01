@@ -1,6 +1,5 @@
 let input = document.querySelector("#input");
 let btn = document.querySelectorAll("button")
-
 $(document).ready(function(){
     $(".number").click(function(e){
         $(input).append($(e.target).text());
@@ -8,6 +7,19 @@ $(document).ready(function(){
             $('#warning').css({
                 'visibility' : 'visible'
             });
+            if($("#warning").css({'visibility' : 'visible'})){
+                $("#warning").hover(function () {
+                    $("span").css({
+                        "visibility" : "visible",
+                        "opacity" : "1"
+                    })
+                }, function(){
+                    $("span").css({
+                        "visibility" : "hidden",
+                        "opacity" : "0"
+                    })
+                })
+            }
             for(let i = 0; i < btn.length; i++){
                 btn[i].disabled = true
                 btn[1].disabled = false
