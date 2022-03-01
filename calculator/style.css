@@ -1,33 +1,22 @@
 @import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
 @font-face {
-  font-family: 'Digital';
-  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot');
-  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix')
-      format('embedded-opentype'),
-    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2')
-      format('woff2'),
-    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff')
-      format('woff'),
-    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf')
-      format('truetype'),
-    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7')
-      format('svg');
+    font-family: 'Digital';
+    src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot')
+            format('embedded-opentype'),
+        url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2')
+            format('woff2'),
+        url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff')
+            format('woff'),
+        url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf')
+            format('truetype'),
+        url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7')
+            format('svg');
 }
 *{
     font-family: 'Digital';
     padding: 0;
     margin: 0;
     color: white;
-}
-body{
-    overflow: hidden;
-    background-color: #0d141f;
-}
-#clearEntry{
-    grid-area:  2 / 1 / span 1/ span 2;
-}
-#operation{
-    font-weight: bold; 
 }
 .container{
     display: grid;
@@ -43,28 +32,14 @@ body{
     background-color: #0d141f;
     border: none;
 }
-.container button:not(.results){
+.container button:not(.input){
     box-sizing: border-box;
     padding-top: 15px;
     font-size: 20px;
-}
-.number , .operation{
+    font-weight: bold;
+    letter-spacing: 2px;
     padding-bottom: 10px;
-}
-.operation{
     font-weight: bold;
-}
-.input{
-    letter-spacing: 5px;
-    text-align: right;
-    font-weight: bold;
-    font-size: 30px;
-    padding: 30px;
-    padding-right: 10px;
-    grid-area: 1 / 1 / span 1 / span 4;
-}
-.clearEntry{
-    grid-area: 2 / 1 / span 1/ span 2;
 }
 span{
     font-family: cursive;
@@ -93,8 +68,4 @@ span::after{
     border-style: solid;
     transform: translate(95px, -18px);
     border-color:  transparent transparent transparent rgb(253, 89, 89);
-}
-i:hover span{
-    visibility: visible;
-    opacity: 1;
 }
